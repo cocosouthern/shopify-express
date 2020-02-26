@@ -6,7 +6,7 @@ A small set of abstractions that will help you quickly build an Express.js app t
 
 ```javascript
 const express = require('express');
-const shopifyExpress = require('@shopify/shopify-express');
+const shopifyExpress = require('@cocosouthern/shopify-express');
 const session = require('express-session');
 
 const app = express();
@@ -69,8 +69,8 @@ By default the package comes with `MemoryStrategy` and `RedisStrategy`. If none 
 Simple javascript object based memory store for development purposes. Do not use this in production!
 
 ```javascript
-const shopifyExpress = require('@shopify/shopify-express');
-const { MemoryStrategy } = require('@shopify/shopify-express/strategies');
+const shopifyExpress = require('@cocosouthern/shopify-express');
+const { MemoryStrategy } = require('@cocosouthern/shopify-express/strategies');
 
 const shopify = shopifyExpress({
   shopStore: new MemoryStrategy(redisConfig),
@@ -83,8 +83,8 @@ const shopify = shopifyExpress({
 Uses [redis](https://www.npmjs.com/package/redis) under the hood, so you can pass it any configuration that's valid for the library.
 
 ```javascript
-const shopifyExpress = require('@shopify/shopify-express');
-const { RedisStrategy } = require('@shopify/shopify-express/strategies');
+const shopifyExpress = require('@cocosouthern/shopify-express');
+const { RedisStrategy } = require('@cocosouthern/shopify-express/strategies');
 
 const redisConfig = {
   // your config here
@@ -166,4 +166,4 @@ app.use('/', shopifyExpress.routes);
 
 ## Contributing
 
-Contributions are welcome. Please refer to the [contributing guide](https://github.com/Shopify/shopify-express/blob/master/CONTRIBUTING.md) for more details.
+Contributions are welcome. Please refer to the [contributing guide](https://github.com/cocosouthern/shopify-express/blob/master/CONTRIBUTING.md) for more details.
